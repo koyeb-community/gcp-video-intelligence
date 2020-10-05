@@ -1,0 +1,4 @@
+functions:
+  - name: gcp-video-intelligence
+    runtime: nodejs14
+    handler: gcp-video-intelligence.handler
