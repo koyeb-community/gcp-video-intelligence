@@ -17,7 +17,7 @@ parameters:
       default: "LABEL_DETECTION"
 template: |
     env:
-        GOOGLE_APPLICATION_CREDENTIALS: /gcp-key.json
+        GOOGLE_APPLICATION_CREDENTIALS: /credentials/gcp-key.json
         {{ if .VIDEO_INTELLIGENCE_FILE_REFIX }}
         VIDEO_INTELLIGENCE_FILE_REFIX: {{ .VIDEO_INTELLIGENCE_FILE_REFIX }}
         {{ end }}
@@ -28,8 +28,8 @@ template: |
     - name: {{ .STORE }}
       store: {{ .STORE }}
     - secret: {{ .GCP_KEY }}
-      name: gcp-key.json
-      path: /
+      name: "gcp-key.json"
+      path: /credentials
     events:
       - cloudevent:
           expression: |
