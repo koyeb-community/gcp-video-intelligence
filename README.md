@@ -8,8 +8,8 @@ version: 1.0.0
 
 ## Summary
 
-GCP video intelligence is a video detection service that allows you to add Google's video analysis technology to your applications.
-The GCP video intelligence function allows you to detect peopele, faces, logos and labels such as locations, activities, products, in videos.
+GCP Video Intelligence is a video detection service that allows you to add Google's video analysis technology to your applications.
+The GCP Video Intelligence function allows you to detect peopele, faces, logos and labels such as locations, activities, products, in videos.
 
 This function comes with the following variants:
 
@@ -18,7 +18,7 @@ This function comes with the following variants:
 - **Video person detection**, to detect humans' presence in a video and track the bounding box of individual people across the video.
 - **Video face detection**, to detect faces and facial attributes in a video. Attributes include information about headwear, frontal gaze, eye visibility, glasses, mouth, and smile.
 
-## Advantages of using Koyeb's GCP video intelligence Function
+## Advantages of using Koyeb's GCP Video Intelligence Function
 
 With Koyeb, you can run the GCP video intelligence integration to add video analysis and content discovery to your applications in seconds. Additional benefits:
 
@@ -33,15 +33,15 @@ With Koyeb, you can run the GCP video intelligence integration to add video anal
 - Build a recommendation engine
 - Classify and archive media
 
-## How the GCP video intelligence Function Works with Koyeb
+## How the GCP Video Intelligence Function Works with Koyeb
 
-To get started with the GCP video intelligence function, you have to copy the configuration snippet below and replace the required values with yours.
+To get started with the GCP Video Intelligence function, you have to copy the configuration snippet below and replace the required values with yours.
 This function is triggered each time an object of type `.mp4, .mpeg4, .mov, or .avi` is created in the Store you use.
 
 Below is what you need to use this function:
 
 * A Koyeb valid account
-* Valid GCP service account configuration with permissions to access GCP video intelligence service
+* Valid GCP service account configuration with permissions to access GCP Video Intelligence service
 * A Store to upload videos and save the function result
 
 > Videos must be type `mp4, .mpeg4, .mov, or .avi`
