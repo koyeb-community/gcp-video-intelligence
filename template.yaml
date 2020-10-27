@@ -1,6 +1,6 @@
 parameters:
     - name: STORE
-      description: "The store to watch to trigger the function and save the AWS Rekognition result."
+      description: "The store to watch to trigger the function and save the GCP Video intelligence result."
       type: STORE_REF
       required: true
     - name: GCP_KEY
@@ -36,5 +36,5 @@ template: |
             event.source == "koyeb.com/gateway" &&
             event.subject == "{{ .STORE }}" &&
             event.type.matches("s3:ObjectCreated:.*") &&
-            !data.object.key.startsWith("{{ .REKOGNITION_FILE_PREFIX }}") &&
+            !data.object.key.startsWith("{{ .VIDEO_INTELLIGENCE_FILE_PREFIX }}") &&
             data.object.key.matches("([^\\s]+(\\.(?i)(avi|mp4|mpeg4|mov))$)")

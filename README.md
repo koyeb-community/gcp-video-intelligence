@@ -40,7 +40,7 @@ This function is triggered each time an object of type `.mp4, .mpeg4, .mov, or .
 
 Below is what you need to use this function:
 
-* A Koyeb valid account
+* A valid [Koyeb account](//app.koyeb.com)
 * Valid GCP service account configuration with permissions to access GCP Video Intelligence service
 * A Store to upload videos and save the function result
 
