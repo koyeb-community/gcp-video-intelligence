@@ -28,7 +28,7 @@ const prefix =
 const executeVideoIntelligenceFeature = async (
   videoIntelligenceInstance,
   s3Instance,
-  objectbBody,
+  objectBody,
   key,
   bucket
 ) => {
@@ -36,15 +36,8 @@ const executeVideoIntelligenceFeature = async (
     const videoIntelligenceFeature =
       process.env.VIDEO_INTELLIGENCE_FEATURE || "LABEL_DETECTION";
 
-    const obj = await s3Instance
-      .getObject({
-        Bucket: bucket,
-        Key: key,
-      })
-      .promise();
-
     const request = {
-      inputContent: obj.Body.toString("base64"),
+      inputContent: objectBody.toString("base64"),
       features: [videoIntelligenceFeature],
       videoContext: {
         speechTranscriptionConfig: {
@@ -141,12 +134,12 @@ const handler = async (event) => {
   const s3Instance = new S3(getS3Configuration(bucket));
   const videoIntelligenceInstance = new VideoIntelligence.VideoIntelligenceServiceClient();
 
-  const objectbBody = await getSourceObject(s3Instance, bucket, key);
+  const objectBody = await getSourceObject(s3Instance, bucket, key);
 
   await executeVideoIntelligenceFeature(
     videoIntelligenceInstance,
     s3Instance,
-    objectbBody,
+    objectBody,
     key,
     bucket
   );
