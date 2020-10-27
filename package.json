@@ -1,6 +1,6 @@
 {
   "name": "gcp-video-intelligence",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./gcp-video-intelligence.js",
   "homepage": "https://www.koyeb.com",
   "repository": "https://github.com/koyeb-community/gcp-video-intelligence",
