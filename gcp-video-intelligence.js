@@ -49,7 +49,8 @@ const executeVideoIntelligenceFeature = async (
       videoContext: {
         speechTranscriptionConfig: {
           languageCode: "en-US",
-          enableAuto: true,
+          enableAutomaticPunctuation: true,
+          enableSpeakerDiarization: true,
         },
       },
     };
