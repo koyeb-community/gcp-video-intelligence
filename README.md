@@ -3,7 +3,6 @@ display_name: GCP video intelligence
 icon: "https://assets.koyeb.com/icons/gcp.svg"
 short_description: The GCP video intelligence function allows you to enable powerful content discovery and analysis in your videos.
 status: ACTIVE
-version: 1.0.1
 ---
 
 ## Summary

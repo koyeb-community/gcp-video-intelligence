@@ -16,3 +16,15 @@ jobs:
         with:
           docker_username: ${{ secrets.DOCKER_USERNAME }}
           docker_password: ${{ secrets.DOCKER_PASSWORD }}
+      - uses: koyeb-community/catalog-seed-action@v1
+        name: "Seed staging"
+        with:
+          api_username: ${{ secrets.API_USERNAME }}
+          api_password: ${{ secrets.API_STAGING_PASSWORD }}
+          api_url: "https://staging.koyeb.com"
+      - uses: koyeb-community/catalog-seed-action@v1
+        name: "Seed prod"
+        with:
+          api_username: ${{ secrets.API_USERNAME }}
+          api_password: ${{ secrets.API_PROD_PASSWORD }}
+          api_url: "https://app.koyeb.com"
